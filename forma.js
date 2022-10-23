@@ -18,7 +18,6 @@ function check() {
     if (name.value == ''){
         document.getElementById('errorMessage')
         .innerHTML+= "Поле имя не заполнено <br>";
-        elsealert(`Привет ${name}`);
     }
 
     if (surname.value == ''){
@@ -46,16 +45,7 @@ function check() {
         .innerHTML+= "Ваш пароль слишком короткий <br>";
     }
 
-    let fields = form.querySelectorAll('.field')
-
-form.addEventListener('submit', function (event) {
-  event.preventDefault()
-
-  for (let i = 0; i < fields.length; i++) {
-    if (!fields[i].value) {
-      console.log('field is blank', fields[i])
-      alert('привет')
-    }
-  }
-})
+    else {
+        alert(`Привет ${nameM}!`);
+}
 }
